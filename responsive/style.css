@@ -85,13 +85,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FAFAFA;
 }
 
-/* Респонсивная корректировка колонок */
+
 @media (max-width: 768px) {
   body {
-    font-size: 14px; /* Уменьшаем базовый размер шрифта на планшетах */
+    font-size: 14px; 
   }
   h1, h2, h3, h4, h5, h6, p, div, section {
-    font-size: 0.9rem; /* Уменьшаем размер шрифта относительно тела */
+    font-size: 0.9rem; 
   }
   .main {
     grid-template-columns: 2fr 1fr;
@@ -103,10 +103,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   body {
-    font-size: 12px; /* Ещё меньше размер шрифта на мобильных */
+    font-size: 12px; 
   }
   h1, h2, h3, h4, h5, h6, p, div, section {
-    font-size: 0.8rem; /* Пропорционально уменьшаем заголовки и текст */
+    font-size: 0.8rem; 
   }
   .main {
     grid-template-columns: 1fr;
