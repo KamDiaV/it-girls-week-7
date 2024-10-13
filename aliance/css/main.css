@@ -266,7 +266,7 @@
 .production__title {
   font-size: 60px;
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: #292D33;
 }
 .production__grid {
@@ -274,10 +274,27 @@
   grid-template-columns: repeat(3, 1fr); /* Сетка из 3 столбцов */
 }
 .production__item {
-  padding: 20px;
+  position: relative;
+  padding-top: 40px;
+  padding-left: 50px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 593px; /* Минимальная высота для каждого блока */
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.production__item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.production__item:hover .production__name {
+  color: #5C8EE5; /* Меняем цвет текста заголовка при наведении на всю карточку */
 }
 .production__image {
-  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 480px; /* Размер изображения можно изменить в зависимости от необходимости */
   height: auto;
   margin-bottom: 0;
 }
@@ -285,15 +302,110 @@
   font-size: 28px;
   margin-bottom: 10px;
   color: #292D33;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-.production:hover {
-  color: #5C8EE5;
 }
 .production__desc {
   font-size: 16px;
   color: #828A99;
+  line-height: 160%;
+  max-width: 71%;
+}
+
+.blog__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.blog__title {
+  font-size: 60px;
+  text-align: left;
+  margin-bottom: 50px;
+  color: #292D33;
+}
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Сетка из 2 столбцов */
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.blog__item {
+  position: relative;
+  overflow: hidden;
+}
+.blog__item .blog__image {
+  width: 100%;
+  height: auto;
+}
+.blog__item .blog__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 50px;
+}
+.blog__item .blog__heading {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.blog__item .blog__desc {
+  font-size: 16px;
+  line-height: 160%;
+}
+.blog__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog__nav {
+  display: flex;
+}
+.blog__nav-btn {
+  width: 80px;
+  height: 60px;
+  background-color: #5C8EE5;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Добавляем SVG-иконки для стрелок */
+}
+.blog__nav-btn:hover {
+  background-color: #003b75;
+}
+.blog__nav-btn--prev::before {
+  content: "←"; /* Unicode для стрелки влево */
+  font-size: 40px;
+}
+.blog__nav-btn--next::before {
+  content: "→"; /* Unicode для стрелки вправо */
+  font-size: 40px;
+}
+
+.blog__link {
+  font-size: 16px;
+  color: #5C8EE5;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding-left: 50px; /* Добавляем отступ слева для размещения прямоугольника */
+  transition: color 0.3s ease;
+  /* Добавляем прямоугольник перед текстом */
+}
+.blog__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: #5C8EE5; /* Цвет прямоугольника */
+}
+.blog__link:hover {
+  color: #003b75;
 }
 
 html {

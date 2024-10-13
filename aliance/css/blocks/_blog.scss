@@ -1,0 +1,114 @@
+.blog__container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+}
+
+.blog {
+  
+  &__title {
+    font-size: 60px;
+    text-align: left;
+    margin-bottom: 50px;
+    color: $txt;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Сетка из 2 столбцов */
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    
+    .blog__image {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: white;
+      padding: 50px;
+    }
+
+    .blog__heading {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .blog__desc {
+      font-size: 16px;
+      line-height: 160%;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+
+    &-btn {
+      width: 80px;
+      height: 60px;
+      background-color: $main;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: $hover;
+      }
+
+      /* Добавляем SVG-иконки для стрелок */
+      &--prev::before {
+        content: '\2190'; /* Unicode для стрелки влево */
+        font-size: 40px;
+      }
+
+      &--next::before {
+        content: '\2192'; /* Unicode для стрелки вправо */
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.blog__link {
+  font-size: 16px;
+  color: $main;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding-left: 50px; /* Добавляем отступ слева для размещения прямоугольника */
+  transition: color 0.3s ease;
+  
+  /* Добавляем прямоугольник перед текстом */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 1px;
+    background-color: $main; /* Цвет прямоугольника */
+  }
+
+  &:hover {
+    color: $hover;
+  }
+}
