@@ -87,10 +87,10 @@
     position: relative;
   }
   .logo {
-    margin: 0 auto; /* Логотип центрируется */
+    margin-right: 0; /* Убираем отступ справа */
     position: absolute;
-    left: 50%; /* Логотип в центре */
-    transform: translateX(-50%); /* Центровка логотипа */
+    left: 20px; /* Логотип перемещается к правому краю */
+    transform: none; /* Убираем центрирование */
   }
   .menu {
     display: none; /* Прячем меню */
@@ -109,8 +109,13 @@
     margin: 0;
     position: relative;
   }
+  .logo {
+    margin-right: 0; /* Убираем отступ справа */
+    position: absolute;
+    left: 20px; /* Логотип перемещается к правому краю */
+    transform: none; /* Убираем центрирование */
+  }
   .menu,
-  .logo,
   .phone-number,
   .header__btn {
     display: none;
@@ -150,7 +155,7 @@
   .hamburger {
     display: flex; /* Показать на экранах 768px и меньше */
     position: absolute;
-    left: 20px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -269,7 +274,7 @@
   .hero__title {
     width: 100%; /* Текст занимает всю ширину */
     text-align: left;
-    margin-top: 50px; /* Уменьшаем отступ сверху */
+    margin-top: 80px; /* Уменьшаем отступ сверху */
   }
   .hero__main-title {
     font-size: 22px; /* Уменьшаем размер заголовка для маленького экрана */

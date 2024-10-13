@@ -84,10 +84,10 @@
   }
 
   .logo {
-    margin: 0 auto; /* Логотип центрируется */
+    margin-right: 0; /* Убираем отступ справа */
     position: absolute;
-    left: 50%; /* Логотип в центре */
-    transform: translateX(-50%); /* Центровка логотипа */
+    left: 20px; /* Логотип перемещается к правому краю */
+    transform: none; /* Убираем центрирование */
   }
 
   .menu {
@@ -98,7 +98,7 @@
   .header__btn {
     display: none; /* Скрываем номер телефона и кнопку */
   }
-}
+} 
 
 @media (max-width: 320px) {
   .header {
@@ -110,8 +110,14 @@
     position: relative;
   }
 
+  .logo {
+    margin-right: 0; /* Убираем отступ справа */
+    position: absolute;
+    left: 20px; /* Логотип перемещается к правому краю */
+    transform: none; /* Убираем центрирование */
+  }
+  
   .menu,
-  .logo,
   .phone-number,
   .header__btn {
     display: none; 

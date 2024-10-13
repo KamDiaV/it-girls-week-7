@@ -32,7 +32,7 @@
   .hamburger {
     display: flex; /* Показать на экранах 768px и меньше */
     position: absolute;
-    left: 20px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
