@@ -2,65 +2,69 @@
   box-sizing: border-box;
 }
 
-/* Базовый стиль для текста */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 16px; /* Для десктопов */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, p, div, section {
-  font-size: 1rem; /* Пропорциональный размер шрифта */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 /* Шапка */
 .header {
-  background-color: #d3d3d3;
-  padding: 20px;
-  text-align: center;
+    background-color: #d3d3d3;
+    padding: 20px;
+    text-align: center;
 }
 
 /* Основной контент */
 .main {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 .main-content {
-  background-color: #fdf4d3;
-  padding: 20px;
+    background-color: #fdf4d3;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 10px;
 }
 
-.main-title {
-  text-align: center;
+.main-content h1 {
+    text-align: center;
 }
 
 .sidebar {
-  background-color: #e5f6db;
-  padding: 20px;
-  text-align: center;
+    background-color: #e5f6db;
+    padding: 20px;
+    text-align: center;
 }
 
 .content-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 10px;
 }
 
 .content-item {
   background-color: #f5d99f;
   padding: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .content-item:nth-child(3) {
-  grid-column: span 2;
+  grid-column: span 2; 
 }
 
 /* Футер */
@@ -72,34 +76,35 @@ h1, h2, h3, h4, h5, h6, p, div, section {
 .footer-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .footer-section {
-  padding: 20px;
+  padding: 24px;
   text-align: center;
   background-color: #FAFAFA;
 }
 
+
 /* Адаптивный макет для планшетов */
 @media (max-width: 768px) {
   body {
-    font-size: 14px; /* Уменьшаем базовый размер шрифта на планшетах */
+    font-size: 14px; 
   }
 
   h1, h2, h3, h4, h5, h6, p, div, section {
-    font-size: 0.9rem; /* Уменьшаем размер шрифта относительно тела */
+    font-size: 0.9rem; 
   }
   .main {
     grid-template-columns: 2fr 1fr;
   }
   .content-list {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Два элемента на строке */
-    gap: 2vw; /* Расстояние между элементами */
+    grid-template-columns: 1fr 1fr; 
+    gap: 2vw; 
   }
   .content-item {
-    grid-column: span 1; /* Каждый элемент занимает одну колонку */
+    grid-column: span 1; 
   }
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
@@ -109,11 +114,11 @@ h1, h2, h3, h4, h5, h6, p, div, section {
 /* Адаптивный макет для мобильных устройств */
 @media (max-width: 480px) {
   body {
-    font-size: 12px; /* Ещё меньше размер шрифта на мобильных */
+    font-size: 12px; 
   }
 
   h1, h2, h3, h4, h5, h6, p, div, section {
-    font-size: 0.8rem; /* Пропорционально уменьшаем заголовки и текст */
+    font-size: 0.8rem; 
   }
   .main {
     grid-template-columns: 1fr;
@@ -123,11 +128,12 @@ h1, h2, h3, h4, h5, h6, p, div, section {
     gap: 2vw;
   }
   .content-item {
-    grid-column: span 2; /* Все элементы займут всю ширину */
+    grid-column: span 2; 
   }
-  /* .sidebar {
-    display: none; Скрыть боковую область на мобильных
-  } */
+  .sidebar {
+    display: none; /* Скрыть боковую область на мобильных */
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
   }
