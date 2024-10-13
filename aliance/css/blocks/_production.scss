@@ -6,7 +6,7 @@
 .production {
   padding: 60px 0;
   background-color: #fff;
-
+  
   &__title {
     font-size: 60px;
     text-align: left;
@@ -61,3 +61,78 @@
     max-width: 71%;
   }
 }
+
+
+@media (max-width: 768px) {
+  .production__title {
+    font-size: 36px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .production__grid {
+    grid-template-columns: 1fr 1fr; /* Два столбца на небольших экранах */
+    padding: 20px;
+  }
+
+  .production__item {
+    padding-top: 20px;
+    padding-left: 20px;
+    min-height: 450px; /* Уменьшаем минимальную высоту карточек */
+  }
+
+  .production__image {
+    width: 300px; /* Уменьшаем размер изображений на мобильных устройствах */
+  }
+
+  .production__name {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+  }
+
+  .production__desc {
+    font-size: 14px; /* Уменьшаем размер описания */
+    max-width: 100%; /* Полностью используем ширину карточки */
+  }
+}
+
+@media (max-width: 320px) {
+  .production__title {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    padding-left: 10px;
+    margin-bottom: 15px;
+    text-align: center; /* Центрируем заголовок */
+  }
+
+  .production__grid {
+    grid-template-columns: 1fr; /* Один столбец на маленьких экранах */
+    padding: 10px;
+    grid-gap: 15px; /* Уменьшаем расстояние между элементами */
+  }
+
+  .production__item {
+    padding-top: 10px;
+    padding-left: 10px;
+    min-height: 350px; /* Уменьшаем минимальную высоту карточек */
+  }
+
+  .production__image {
+    width: 100%; /* Изображения занимают всю ширину карточки */
+    height: auto;
+    max-width: 280px; /* Максимальная ширина изображений */
+    margin: 0 auto; /* Центрируем изображение */
+  }
+
+  .production__name {
+    font-size: 18px; /* Уменьшаем размер заголовка */
+    text-align: center; /* Центрируем текст заголовка */
+    margin-bottom: 10px;
+  }
+
+  .production__desc {
+    font-size: 12px; /* Уменьшаем размер описания */
+    line-height: 150%;
+    max-width: 100%; /* Используем всю ширину карточки */
+    text-align: center; /* Центрируем описание */
+  }
+}
+

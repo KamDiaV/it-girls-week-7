@@ -4,11 +4,6 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 7px;
-
-  // @include tablets {
-  //   display: inline-flex;
-  // }
 }
 
 .hamburger__plank {
@@ -16,4 +11,31 @@
   background: #fff;
   height: 4px;
   border-radius: 10px;
+}
+
+.hamburger {
+  width: 26px;
+  height: 24px;
+  display: none; /* Скрыто по умолчанию */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger__plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Показать на экранах 768px и меньше */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
 }

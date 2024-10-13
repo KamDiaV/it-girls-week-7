@@ -55,3 +55,94 @@
 .btn--theme--blue:hover {
   background-color: $hover; /* Цвет при наведении */
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 0;
+    margin-bottom: 100px;
+  }
+
+  .hero__container {
+    padding: 0 20px;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: left;
+  }
+
+  .rectangle {
+    display: none;
+  }
+
+  .hero__title {
+    width: 100%; /* Текст занимает всю ширину */
+    text-align: left; /* Центрируем текст */
+    margin-top: 100px;
+  }
+
+  .hero__main-title {
+    font-size: 36px; /* Уменьшаем размер заголовка */
+    line-height: 120%;
+    margin-bottom: 20px;
+    max-width: 70%;
+  }
+
+  .hero__title-desc {
+    font-size: 14px;
+    line-height: 160%;
+    margin-bottom: 30px;
+    text-align: left; /* Центрируем описание */
+    max-width: 58%;
+  }
+
+  .title__btn {
+    width: 100%; /* Кнопка занимает всю ширину */
+    height: 56px; /* Уменьшаем высоту кнопки */
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    padding: 10px 0;
+    margin-bottom: 50px;
+  }
+
+  .hero__container {
+    padding: 0 15px;
+    flex-direction: column; /* Элементы остаются вертикальными */
+    align-items: flex-start; /* Выровнены по левому краю */
+  }
+
+  .rectangle {
+    display: none; /* Линия удаляется */
+  }
+
+  .hero__title {
+    width: 100%; /* Текст занимает всю ширину */
+    text-align: left;
+    margin-top: 50px; /* Уменьшаем отступ сверху */
+  }
+
+  .hero__main-title {
+    font-size: 22px; /* Уменьшаем размер заголовка для маленького экрана */
+    margin-bottom: 15px;
+    max-width: 100%; /* Полная ширина для заголовка */
+    text-align: center;
+  }
+
+  .hero__title-desc {
+    font-size: 12px; /* Уменьшаем размер текста */
+    line-height: 140%; /* Меньший интервал между строками */
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 100%; /* Описание будет растягиваться на всю ширину */
+    text-align: center;
+  }
+
+  .title__btn {
+    width: 100%; /* Кнопка занимает всю ширину */
+    height: 48px; /* Уменьшаем высоту кнопки */
+    font-size: 14px; /* Уменьшаем размер текста */
+    margin-bottom: 30px; /* Уменьшаем отступ снизу */
+  }
+}

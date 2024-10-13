@@ -77,12 +77,43 @@
   right: 0; /* Прижимаем к правому краю */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .header {
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Разделение элементов */
+    height: 40px;
+    margin: 0;
+    position: relative;
   }
-  .header__consult-btn {
-    margin-top: 10px;
+  .logo {
+    margin: 0 auto; /* Логотип центрируется */
+    position: absolute;
+    left: 50%; /* Логотип в центре */
+    transform: translateX(-50%); /* Центровка логотипа */
+  }
+  .menu {
+    display: none; /* Прячем меню */
+  }
+  .phone-number,
+  .header__btn {
+    display: none; /* Скрываем номер телефона и кнопку */
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Разделение элементов */
+    height: 40px;
+    margin: 0;
+    position: relative;
+  }
+  .menu,
+  .logo,
+  .phone-number,
+  .header__btn {
+    display: none;
   }
 }
 .hamburger {
@@ -91,7 +122,6 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 7px;
 }
 
 .hamburger__plank {
@@ -101,6 +131,32 @@
   border-radius: 10px;
 }
 
+.hamburger {
+  width: 26px;
+  height: 24px;
+  display: none; /* Скрыто по умолчанию */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger__plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Показать на экранах 768px и меньше */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+}
 .hero {
   background: url(../../img/bg.jpg) no-repeat center center;
   background-size: cover;
@@ -159,6 +215,83 @@
   background-color: #003b75; /* Цвет при наведении */
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 0;
+    margin-bottom: 100px;
+  }
+  .hero__container {
+    padding: 0 20px;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: left;
+  }
+  .rectangle {
+    display: none;
+  }
+  .hero__title {
+    width: 100%; /* Текст занимает всю ширину */
+    text-align: left; /* Центрируем текст */
+    margin-top: 100px;
+  }
+  .hero__main-title {
+    font-size: 36px; /* Уменьшаем размер заголовка */
+    line-height: 120%;
+    margin-bottom: 20px;
+    max-width: 70%;
+  }
+  .hero__title-desc {
+    font-size: 14px;
+    line-height: 160%;
+    margin-bottom: 30px;
+    text-align: left; /* Центрируем описание */
+    max-width: 58%;
+  }
+  .title__btn {
+    width: 100%; /* Кнопка занимает всю ширину */
+    height: 56px; /* Уменьшаем высоту кнопки */
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 320px) {
+  .hero {
+    padding: 10px 0;
+    margin-bottom: 50px;
+  }
+  .hero__container {
+    padding: 0 15px;
+    flex-direction: column; /* Элементы остаются вертикальными */
+    align-items: flex-start; /* Выровнены по левому краю */
+  }
+  .rectangle {
+    display: none; /* Линия удаляется */
+  }
+  .hero__title {
+    width: 100%; /* Текст занимает всю ширину */
+    text-align: left;
+    margin-top: 50px; /* Уменьшаем отступ сверху */
+  }
+  .hero__main-title {
+    font-size: 22px; /* Уменьшаем размер заголовка для маленького экрана */
+    margin-bottom: 15px;
+    max-width: 100%; /* Полная ширина для заголовка */
+    text-align: center;
+  }
+  .hero__title-desc {
+    font-size: 12px; /* Уменьшаем размер текста */
+    line-height: 140%; /* Меньший интервал между строками */
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 100%; /* Описание будет растягиваться на всю ширину */
+    text-align: center;
+  }
+  .title__btn {
+    width: 100%; /* Кнопка занимает всю ширину */
+    height: 48px; /* Уменьшаем высоту кнопки */
+    font-size: 14px; /* Уменьшаем размер текста */
+    margin-bottom: 30px; /* Уменьшаем отступ снизу */
+  }
+}
 .features {
   display: flex;
   justify-content: space-between; /* Распределение элементов по ширине */
@@ -192,6 +325,74 @@
   max-width: 67%;
 }
 
+@media (max-width: 768px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Для трех элементов в первом ряду */
+    grid-template-rows: auto auto; /* Два ряда */
+    grid-gap: 20px; /* Отступы между элементами */
+    padding: 20px;
+  }
+  .features__item {
+    display: flex;
+    flex-direction: row; /* Иконка и текст рядом */
+    align-items: center;
+    padding: 15px 0;
+    text-align: left;
+    border: none; /* Убираем границы */
+    gap: 30px;
+  }
+  .feature__icon {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+  .feature__text {
+    font-size: 14px; /* Уменьшаем размер текста */
+    line-height: 1.5;
+  }
+  /* Для второго ряда, два элемента в одном ряду */
+  .features__item:nth-child(4),
+  .features__item:nth-child(5) {
+    grid-column: span 1; /* Каждый элемент занимает одну колонку */
+  }
+  .features__item:last-child {
+    grid-column: span 2; /* Увеличиваем последний элемент на две колонки, если нужно */
+  }
+}
+@media (max-width: 320px) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr; /* Один элемент в ряду */
+    grid-gap: 15px; /* Уменьшаем отступы между элементами */
+    padding: 10px;
+  }
+  .features__item {
+    display: flex;
+    flex-direction: row; /* Иконка и текст рядом */
+    align-items: center;
+    text-align: left;
+    border: none; /* Убираем границы */
+    padding: 10px 0; /* Уменьшаем внутренние отступы */
+    gap: 15px; /* Уменьшаем расстояние между иконкой и текстом */
+  }
+  .feature__icon {
+    width: 24px; /* Уменьшаем размер иконки */
+    height: 24px;
+    margin: 0; /* Убираем дополнительные отступы */
+  }
+  .feature__text {
+    font-size: 12px; /* Уменьшаем размер текста */
+    line-height: 1.4;
+    max-width: 100%; /* Текст занимает всю доступную ширину */
+  }
+  /* Убираем специальные стили для последних элементов, так как все элементы в один столбец */
+  .features__item:nth-child(4),
+  .features__item:nth-child(5),
+  .features__item:last-child {
+    grid-column: span 1;
+  }
+}
 .steps__container {
   max-width: 1440px;
   margin: 0 auto;
@@ -207,10 +408,10 @@
 .steps__list {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 50px;
 }
 .steps .step {
-  width: 23%; /* Все блоки шагов будут равномерно распределены */
+  width: 100%; /* Все блоки шагов будут равномерно распределены */
 }
 .steps .step__number {
   font-size: 48px;
@@ -254,6 +455,87 @@
   color: #003b75;
 }
 
+@media (max-width: 768px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Два столбца */
+    grid-gap: 20px; /* Отступы между элементами */
+  }
+  .step {
+    width: 100%; /* Шаги занимают всю ширину колонки */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .steps__container {
+    padding: 0 15px; /* Добавляем отступы по бокам для небольших экранов */
+  }
+  .steps__title {
+    font-size: 36px; /* Уменьшаем размер заголовка */
+    line-height: 120%;
+    margin-bottom: 30px; /* Уменьшаем нижний отступ */
+  }
+  .step__number {
+    font-size: 36px; /* Уменьшаем размер номера */
+    margin-bottom: 20px; /* Уменьшаем отступ */
+  }
+  .step__title {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+    margin-bottom: 10px;
+  }
+  .step__desc {
+    font-size: 14px; /* Уменьшаем размер описания */
+    line-height: 150%; /* Уменьшаем межстрочный интервал */
+    margin-bottom: 15px;
+  }
+  .step__link {
+    font-size: 14px; /* Уменьшаем размер текста ссылки */
+    padding-left: 40px; /* Уменьшаем отступ для прямоугольника */
+  }
+  .step__link::before {
+    width: 30px; /* Уменьшаем ширину прямоугольника перед текстом */
+  }
+}
+@media (max-width: 320px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: 1fr; /* Один столбец */
+    grid-gap: 15px; /* Уменьшаем отступы между элементами */
+  }
+  .step {
+    width: 100%; /* Шаги занимают всю ширину колонки */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .steps__container {
+    padding: 0 10px; /* Уменьшаем отступы по бокам для экранов 320px */
+  }
+  .steps__title {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    line-height: 120%;
+    margin-bottom: 20px; /* Уменьшаем нижний отступ */
+    text-align: center; /* Центрируем заголовок */
+  }
+  .step__number {
+    font-size: 8px; /* Уменьшаем размер номера */
+    margin-bottom: 10px; /* Уменьшаем отступ */
+  }
+  .step__title {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    margin-bottom: 8px;
+  }
+  .step__desc {
+    font-size: 12px; /* Уменьшаем размер описания */
+    line-height: 140%; /* Уменьшаем межстрочный интервал */
+    margin-bottom: 10px;
+  }
+  .step__link {
+    font-size: 12px; /* Уменьшаем размер текста ссылки */
+    padding-left: 30px; /* Уменьшаем отступ для прямоугольника */
+  }
+  .step__link::before {
+    width: 20px; /* Уменьшаем ширину прямоугольника перед текстом */
+  }
+}
 .production__container {
   max-width: 1440px;
   margin: 0 auto;
@@ -310,6 +592,67 @@
   max-width: 71%;
 }
 
+@media (max-width: 768px) {
+  .production__title {
+    font-size: 36px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .production__grid {
+    grid-template-columns: 1fr 1fr; /* Два столбца на небольших экранах */
+    padding: 20px;
+  }
+  .production__item {
+    padding-top: 20px;
+    padding-left: 20px;
+    min-height: 450px; /* Уменьшаем минимальную высоту карточек */
+  }
+  .production__image {
+    width: 300px; /* Уменьшаем размер изображений на мобильных устройствах */
+  }
+  .production__name {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+  }
+  .production__desc {
+    font-size: 14px; /* Уменьшаем размер описания */
+    max-width: 100%; /* Полностью используем ширину карточки */
+  }
+}
+@media (max-width: 320px) {
+  .production__title {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    padding-left: 10px;
+    margin-bottom: 15px;
+    text-align: center; /* Центрируем заголовок */
+  }
+  .production__grid {
+    grid-template-columns: 1fr; /* Один столбец на маленьких экранах */
+    padding: 10px;
+    grid-gap: 15px; /* Уменьшаем расстояние между элементами */
+  }
+  .production__item {
+    padding-top: 10px;
+    padding-left: 10px;
+    min-height: 350px; /* Уменьшаем минимальную высоту карточек */
+  }
+  .production__image {
+    width: 100%; /* Изображения занимают всю ширину карточки */
+    height: auto;
+    max-width: 280px; /* Максимальная ширина изображений */
+    margin: 0 auto; /* Центрируем изображение */
+  }
+  .production__name {
+    font-size: 18px; /* Уменьшаем размер заголовка */
+    text-align: center; /* Центрируем текст заголовка */
+    margin-bottom: 10px;
+  }
+  .production__desc {
+    font-size: 12px; /* Уменьшаем размер описания */
+    line-height: 150%;
+    max-width: 100%; /* Используем всю ширину карточки */
+    text-align: center; /* Центрируем описание */
+  }
+}
 .blog__container {
   max-width: 1440px;
   margin: 0 auto;
@@ -408,6 +751,90 @@
   color: #003b75;
 }
 
+@media (max-width: 768px) {
+  .blog__title {
+    font-size: 36px; /* Уменьшаем размер заголовка */
+    text-align: left; /* Центрируем заголовок */
+    margin-bottom: 30px;
+    padding-left: 20px;
+    margin-top: 30px;
+  }
+  .blog__grid {
+    grid-template-columns: 1fr; /* Один столбец вместо двух */
+    gap: 20px; /* Уменьшаем отступы между элементами */
+    margin: 0px 20px;
+  }
+  .blog__item .blog__content {
+    padding: 20px; /* Уменьшаем внутренние отступы */
+  }
+  .blog__item .blog__heading {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+  .blog__item .blog__desc {
+    font-size: 14px; /* Уменьшаем размер описания */
+  }
+  .blog__btn {
+    flex-direction: column; /* Размещаем элементы кнопок вертикально */
+    align-items: center;
+  }
+  .blog__link {
+    display: none;
+  }
+  .blog__nav {
+    margin-top: 20px; /* Добавляем отступ сверху для навигации */
+    display: flex;
+    justify-content: center;
+  }
+  .blog__nav-btn {
+    width: 60px; /* Уменьшаем размер кнопок навигации */
+    height: 40px;
+  }
+  .blog__nav--prev::before, .blog__nav--next::before {
+    font-size: 30px; /* Уменьшаем размер стрелок */
+  }
+}
+@media (max-width: 320px) {
+  .blog__title {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
+  }
+  .blog__grid {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 10px; /* Уменьшаем отступы между элементами */
+    margin: 0 10px;
+  }
+  .blog__item .blog__content {
+    padding: 10px; /* Уменьшаем внутренние отступы */
+  }
+  .blog__item .blog__heading {
+    font-size: 18px; /* Уменьшаем размер заголовка */
+  }
+  .blog__item .blog__desc {
+    display: none;
+  }
+  .blog__btn {
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    align-items: center;
+  }
+  .blog__link {
+    display: none; /* Прячем ссылку "Весь блог" */
+  }
+  .blog__nav {
+    margin-top: 15px; /* Отступ сверху для навигации */
+    display: flex;
+    justify-content: center;
+  }
+  .blog__nav-btn {
+    width: 50px; /* Уменьшаем размер кнопок навигации */
+    height: 35px;
+  }
+  .blog__nav--prev::before, .blog__nav--next::before {
+    font-size: 24px; /* Уменьшаем размер стрелок */
+  }
+}
 html {
   font-size: 16px;
 }

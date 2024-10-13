@@ -16,11 +16,11 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 50px;
   }
 
   .step {
-    width: 23%; /* Все блоки шагов будут равномерно распределены */
+    width: 100%; /* Все блоки шагов будут равномерно распределены */
 
     &__number {
       font-size: 48px;
@@ -67,5 +67,105 @@
 
   &:hover {
     color: $hover;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Два столбца */
+    grid-gap: 20px; /* Отступы между элементами */
+  }
+
+  .step {
+    width: 100%; /* Шаги занимают всю ширину колонки */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .steps__container {
+    padding: 0 15px; /* Добавляем отступы по бокам для небольших экранов */
+  }
+
+  .steps__title {
+    font-size: 36px; /* Уменьшаем размер заголовка */
+    line-height: 120%;
+    margin-bottom: 30px; /* Уменьшаем нижний отступ */
+  }
+
+  .step__number {
+    font-size: 36px; /* Уменьшаем размер номера */
+    margin-bottom: 20px; /* Уменьшаем отступ */
+  }
+
+  .step__title {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+    margin-bottom: 10px;
+  }
+
+  .step__desc {
+    font-size: 14px; /* Уменьшаем размер описания */
+    line-height: 150%; /* Уменьшаем межстрочный интервал */
+    margin-bottom: 15px;
+  }
+
+  .step__link {
+    font-size: 14px; /* Уменьшаем размер текста ссылки */
+    padding-left: 40px; /* Уменьшаем отступ для прямоугольника */
+  }
+
+  .step__link::before {
+    width: 30px; /* Уменьшаем ширину прямоугольника перед текстом */
+  }
+}
+
+
+@media (max-width: 320px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: 1fr; /* Один столбец */
+    grid-gap: 15px; /* Уменьшаем отступы между элементами */
+  }
+
+  .step {
+    width: 100%; /* Шаги занимают всю ширину колонки */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .steps__container {
+    padding: 0 10px; /* Уменьшаем отступы по бокам для экранов 320px */
+  }
+
+  .steps__title {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    line-height: 120%;
+    margin-bottom: 20px; /* Уменьшаем нижний отступ */
+    text-align: center; /* Центрируем заголовок */
+  }
+
+  .step__number {
+    font-size: 8px; /* Уменьшаем размер номера */
+    margin-bottom: 10px; /* Уменьшаем отступ */
+  }
+
+  .step__title {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    margin-bottom: 8px;
+  }
+
+  .step__desc {
+    font-size: 12px; /* Уменьшаем размер описания */
+    line-height: 140%; /* Уменьшаем межстрочный интервал */
+    margin-bottom: 10px;
+  }
+
+  .step__link {
+    font-size: 12px; /* Уменьшаем размер текста ссылки */
+    padding-left: 30px; /* Уменьшаем отступ для прямоугольника */
+  }
+
+  .step__link::before {
+    width: 20px; /* Уменьшаем ширину прямоугольника перед текстом */
   }
 }

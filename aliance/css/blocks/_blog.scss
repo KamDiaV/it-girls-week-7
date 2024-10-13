@@ -112,3 +112,113 @@
     color: $hover;
   }
 }
+
+@media (max-width: 768px) {
+  .blog__title {
+    font-size: 36px; /* Уменьшаем размер заголовка */
+    text-align: left; /* Центрируем заголовок */
+    margin-bottom: 30px;
+    padding-left: 20px;
+    margin-top: 30px;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr; /* Один столбец вместо двух */
+    gap: 20px; /* Уменьшаем отступы между элементами */
+    margin: 0px 20px;
+  }
+
+  .blog__item {
+    .blog__content {
+      padding: 20px; /* Уменьшаем внутренние отступы */
+    }
+
+    .blog__heading {
+      font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    .blog__desc {
+      font-size: 14px; /* Уменьшаем размер описания */
+    }
+  }
+
+  .blog__btn {
+    flex-direction: column; /* Размещаем элементы кнопок вертикально */
+    align-items: center;
+  }
+
+  .blog__link {
+    display: none;
+  }
+
+  .blog__nav {
+    margin-top: 20px; /* Добавляем отступ сверху для навигации */
+    display: flex;
+    justify-content: center;
+
+    &-btn {
+      width: 60px; /* Уменьшаем размер кнопок навигации */
+      height: 40px;
+    }
+
+    &--prev::before, 
+    &--next::before {
+      font-size: 30px; /* Уменьшаем размер стрелок */
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .blog__title {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 10px; /* Уменьшаем отступы между элементами */
+    margin: 0 10px;
+  }
+
+  .blog__item {
+    .blog__content {
+      padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    .blog__heading {
+      font-size: 18px; /* Уменьшаем размер заголовка */
+    }
+
+    .blog__desc {
+      display: none;
+    }
+  }
+
+  .blog__btn {
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    align-items: center;
+  }
+
+  .blog__link {
+    display: none; /* Прячем ссылку "Весь блог" */
+  }
+
+  .blog__nav {
+    margin-top: 15px; /* Отступ сверху для навигации */
+    display: flex;
+    justify-content: center;
+
+    &-btn {
+      width: 50px; /* Уменьшаем размер кнопок навигации */
+      height: 35px;
+    }
+
+    &--prev::before,
+    &--next::before {
+      font-size: 24px; /* Уменьшаем размер стрелок */
+    }
+  }
+}

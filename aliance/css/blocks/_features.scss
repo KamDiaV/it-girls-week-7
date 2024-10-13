@@ -31,3 +31,82 @@
   color: #fff;
   max-width: 67%;
 }
+
+@media (max-width: 768px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Для трех элементов в первом ряду */
+    grid-template-rows: auto auto; /* Два ряда */
+    grid-gap: 20px; /* Отступы между элементами */
+    padding: 20px;
+  }
+
+  .features__item {
+    display: flex;
+    flex-direction: row; /* Иконка и текст рядом */
+    align-items: center;
+    padding: 15px 0;
+    text-align: left;
+    border: none; /* Убираем границы */
+    gap: 30px;
+  }
+
+  .feature__icon {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+
+  .feature__text {
+    font-size: 14px; /* Уменьшаем размер текста */
+    line-height: 1.5;
+  }
+
+  /* Для второго ряда, два элемента в одном ряду */
+  .features__item:nth-child(4),
+  .features__item:nth-child(5) {
+    grid-column: span 1; /* Каждый элемент занимает одну колонку */
+  }
+
+  .features__item:last-child {
+    grid-column: span 2; /* Увеличиваем последний элемент на две колонки, если нужно */
+  }
+}
+
+@media (max-width: 320px) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr; /* Один элемент в ряду */
+    grid-gap: 15px; /* Уменьшаем отступы между элементами */
+    padding: 10px;
+  }
+
+  .features__item {
+    display: flex;
+    flex-direction: row; /* Иконка и текст рядом */
+    align-items: center;
+    text-align: left;
+    border: none; /* Убираем границы */
+    padding: 10px 0; /* Уменьшаем внутренние отступы */
+    gap: 15px; /* Уменьшаем расстояние между иконкой и текстом */
+  }
+
+  .feature__icon {
+    width: 24px; /* Уменьшаем размер иконки */
+    height: 24px;
+    margin: 0; /* Убираем дополнительные отступы */
+  }
+
+  .feature__text {
+    font-size: 12px; /* Уменьшаем размер текста */
+    line-height: 1.4;
+    max-width: 100%; /* Текст занимает всю доступную ширину */
+  }
+
+  /* Убираем специальные стили для последних элементов, так как все элементы в один столбец */
+  .features__item:nth-child(4),
+  .features__item:nth-child(5),
+  .features__item:last-child {
+    grid-column: span 1;
+  }
+}
