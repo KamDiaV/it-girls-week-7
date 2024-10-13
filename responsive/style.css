@@ -2,81 +2,85 @@
   box-sizing: border-box;
 }
 
-/* Базовый стиль для текста */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 16px; /* Для десктопов */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, p, div, section {
-  font-size: 1rem; /* Пропорциональный размер шрифта */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 /* Шапка */
 .header {
-  background-color: #d3d3d3;
-  padding: 2vw;
-  text-align: center;
+    background-color: #d3d3d3;
+    padding: 20px;
+    text-align: center;
 }
 
 /* Основной контент */
 .main {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 .main-content {
-  background-color: #fdf4d3;
-  padding: 2vw;
+    background-color: #fdf4d3;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 10px;
 }
 
-.main-title {
-  text-align: center;
+.main-content h1 {
+    text-align: center;
 }
 
 .sidebar {
-  background-color: #e5f6db;
-  padding: 2vw;
-  text-align: center;
+    background-color: #e5f6db;
+    padding: 20px;
+    text-align: center;
 }
 
 .content-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2vw;
+  gap: 10px;
 }
 
 .content-item {
   background-color: #f5d99f;
-  padding: 2vw;
+  padding: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .content-item:nth-child(3) {
-  grid-column: span 2;
+  grid-column: span 2; 
 }
 
 /* Футер */
 .footer {
-  padding: 2vw;
+  padding: 20px;
   background-color: #d3d3d3;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2vw;
+  gap: 24px;
 }
 
 .footer-section {
-  padding: 2vw;
+  padding: 24px;
   text-align: center;
   background-color: #FAFAFA;
 }
