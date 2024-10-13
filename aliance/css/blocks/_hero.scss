@@ -16,7 +16,7 @@
 }
 
 .rectangle {
-  margin-top: 150px; /* Расположение линии под логотипом */
+  margin-top: 150px; 
   margin-bottom: 30px;
   width: 150px;
   height: 2px;
@@ -44,16 +44,16 @@
   text-decoration: none;
   font-weight: bold;
   width: 313px;
-  height: 76px; /* Кнопка будет на всю высоту хедера */
+  height: 76px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap; /* Запрещаем перенос текста */
+  white-space: nowrap; 
   margin-bottom: 100px;
 }
 
 .btn--theme--blue:hover {
-  background-color: $hover; /* Цвет при наведении */
+  background-color: $hover; 
 }
 
 @media (max-width: 768px) {
@@ -64,7 +64,7 @@
 
   .hero__container {
     padding: 0 20px;
-    flex-direction: column; /* Элементы располагаются вертикально */
+    flex-direction: column; 
     align-items: left;
   }
 
@@ -73,13 +73,13 @@
   }
 
   .hero__title {
-    width: 100%; /* Текст занимает всю ширину */
-    text-align: left; /* Центрируем текст */
+    width: 100%; 
+    text-align: left; 
     margin-top: 100px;
   }
 
   .hero__main-title {
-    font-size: 36px; /* Уменьшаем размер заголовка */
+    font-size: 36px; 
     line-height: 120%;
     margin-bottom: 20px;
     max-width: 70%;
@@ -89,13 +89,13 @@
     font-size: 14px;
     line-height: 160%;
     margin-bottom: 30px;
-    text-align: left; /* Центрируем описание */
+    text-align: left; 
     max-width: 58%;
   }
 
   .title__btn {
-    width: 100%; /* Кнопка занимает всю ширину */
-    height: 56px; /* Уменьшаем высоту кнопки */
+    width: 100%; 
+    height: 56px; 
     font-size: 16px;
     margin-bottom: 50px;
   }
@@ -109,40 +109,40 @@
 
   .hero__container {
     padding: 0 15px;
-    flex-direction: column; /* Элементы остаются вертикальными */
-    align-items: flex-start; /* Выровнены по левому краю */
+    flex-direction: column; 
+    align-items: flex-start;
   }
 
   .rectangle {
-    display: none; /* Линия удаляется */
+    display: none; 
   }
 
   .hero__title {
-    width: 100%; /* Текст занимает всю ширину */
+    width: 100%; 
     text-align: left;
-    margin-top: 80px; /* Уменьшаем отступ сверху */
+    margin-top: 80px; 
   }
 
   .hero__main-title {
-    font-size: 22px; /* Уменьшаем размер заголовка для маленького экрана */
+    font-size: 22px; 
     margin-bottom: 15px;
-    max-width: 100%; /* Полная ширина для заголовка */
+    max-width: 100%; 
     text-align: center;
   }
 
   .hero__title-desc {
-    font-size: 12px; /* Уменьшаем размер текста */
-    line-height: 140%; /* Меньший интервал между строками */
+    font-size: 12px; 
+    line-height: 140%; 
     margin-bottom: 20px;
     text-align: left;
-    max-width: 100%; /* Описание будет растягиваться на всю ширину */
+    max-width: 100%; 
     text-align: center;
   }
 
   .title__btn {
-    width: 100%; /* Кнопка занимает всю ширину */
-    height: 48px; /* Уменьшаем высоту кнопки */
-    font-size: 14px; /* Уменьшаем размер текста */
-    margin-bottom: 30px; /* Уменьшаем отступ снизу */
+    width: 100%; 
+    height: 48px; 
+    font-size: 14px; 
+    margin-bottom: 30px;
   }
 }

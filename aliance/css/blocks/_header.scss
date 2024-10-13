@@ -1,10 +1,10 @@
 
 .header-wrapper {
   width: 100%;
-  max-width: 1920px; /* Ограничение на ширину хедера */
+  max-width: 1920px; 
   margin: 0 auto;
-  padding: 0; /* Убираем любые отступы */
-  position: relative; /* Необходим для абсолютного позиционирования внутри */
+  padding: 0; 
+  position: relative; 
 }
 
 .header {
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  margin: 0; /* Убираем отступы у хедера */
+  margin: 0; 
 }
 
 .logo {
@@ -64,57 +64,57 @@
   text-decoration: none;
   font-weight: bold;
   width: 302px;
-  height: 100px; /* Кнопка будет на всю высоту хедера */
+  height: 100px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap; /* Запрещаем перенос текста */
-  top: 0; /* Прижимаем к верху */
-  right: 0; /* Прижимаем к правому краю */
+  white-space: nowrap; 
+  top: 0; 
+  right: 0; 
 }
 
 @media (max-width: 768px) {
   .header {
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
-    justify-content: space-between; /* Разделение элементов */
+    align-items: center; 
+    justify-content: space-between; 
     height: 40px;
     margin: 0;
     position: relative;
   }
 
   .logo {
-    margin-right: 0; /* Убираем отступ справа */
+    margin-right: 0; 
     position: absolute;
-    left: 20px; /* Логотип перемещается к правому краю */
-    transform: none; /* Убираем центрирование */
+    left: 20px; 
+    transform: none; 
   }
 
   .menu {
-    display: none; /* Прячем меню */
+    display: none; 
   }
 
   .phone-number,
   .header__btn {
-    display: none; /* Скрываем номер телефона и кнопку */
+    display: none; 
   }
 } 
 
 @media (max-width: 320px) {
   .header {
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
-    justify-content: space-between; /* Разделение элементов */
+    align-items: center; 
+    justify-content: space-between; 
     height: 40px;
     margin: 0;
     position: relative;
   }
 
   .logo {
-    margin-right: 0; /* Убираем отступ справа */
+    margin-right: 0; 
     position: absolute;
-    left: 20px; /* Логотип перемещается к правому краю */
-    transform: none; /* Убираем центрирование */
+    left: 20px; 
+    transform: none; 
   }
   
   .menu,

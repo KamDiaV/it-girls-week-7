@@ -1,28 +1,28 @@
 .features {
   display: flex;
-  justify-content: space-between; /* Распределение элементов по ширине */
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 0; /* Убираем лишние отступы */
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Верхняя граница */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Нижняя граница */
+  padding: 0; 
+  border-top: 1px solid rgba(255, 255, 255, 0.2); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .features__item {
   display: flex;
-  flex-direction: column; /* Иконка сверху, текст снизу */
+  flex-direction: column; 
   align-items: flex-start;
   padding: 20px;
   text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Полная граница для каждого элемента */
-  flex-grow: 1; /* Чтобы элементы равномерно заполнили пространство */
-  box-sizing: border-box; /* Чтобы границы учитывались в ширине и высоте элементов */
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  flex-grow: 1; 
+  box-sizing: border-box; 
 
 }
 
 .feature__icon {
   width: 36px;
   height: 36px;
-  margin-bottom: 20px; /* Отступ между иконкой и текстом */
+  margin-bottom: 20px; 
 }
 
 .feature__text {
@@ -35,19 +35,19 @@
 @media (max-width: 768px) {
   .features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Для трех элементов в первом ряду */
-    grid-template-rows: auto auto; /* Два ряда */
-    grid-gap: 20px; /* Отступы между элементами */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto auto; 
+    grid-gap: 20px; 
     padding: 20px;
   }
 
   .features__item {
     display: flex;
-    flex-direction: row; /* Иконка и текст рядом */
+    flex-direction: row; 
     align-items: center;
     padding: 15px 0;
     text-align: left;
-    border: none; /* Убираем границы */
+    border: none; 
     gap: 30px;
   }
 
@@ -58,52 +58,50 @@
   }
 
   .feature__text {
-    font-size: 14px; /* Уменьшаем размер текста */
+    font-size: 14px; 
     line-height: 1.5;
   }
 
-  /* Для второго ряда, два элемента в одном ряду */
   .features__item:nth-child(4),
   .features__item:nth-child(5) {
-    grid-column: span 1; /* Каждый элемент занимает одну колонку */
+    grid-column: span 1; 
   }
 
   .features__item:last-child {
-    grid-column: span 2; /* Увеличиваем последний элемент на две колонки, если нужно */
+    grid-column: span 2; 
   }
 }
 
 @media (max-width: 320px) {
   .features {
     display: grid;
-    grid-template-columns: 1fr; /* Один элемент в ряду */
-    grid-gap: 15px; /* Уменьшаем отступы между элементами */
+    grid-template-columns: 1fr; 
+    grid-gap: 15px; 
     padding: 10px;
   }
 
   .features__item {
     display: flex;
-    flex-direction: row; /* Иконка и текст рядом */
+    flex-direction: row; 
     align-items: center;
     text-align: left;
-    border: none; /* Убираем границы */
-    padding: 10px 0; /* Уменьшаем внутренние отступы */
-    gap: 15px; /* Уменьшаем расстояние между иконкой и текстом */
+    border: none; 
+    padding: 10px 0; 
+    gap: 15px; 
   }
 
   .feature__icon {
-    width: 24px; /* Уменьшаем размер иконки */
+    width: 24px; 
     height: 24px;
-    margin: 0; /* Убираем дополнительные отступы */
+    margin: 0; 
   }
 
   .feature__text {
-    font-size: 12px; /* Уменьшаем размер текста */
+    font-size: 12px; 
     line-height: 1.4;
-    max-width: 100%; /* Текст занимает всю доступную ширину */
+    max-width: 100%; 
   }
 
-  /* Убираем специальные стили для последних элементов, так как все элементы в один столбец */
   .features__item:nth-child(4),
   .features__item:nth-child(5),
   .features__item:last-child {

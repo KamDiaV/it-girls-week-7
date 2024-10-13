@@ -16,7 +16,7 @@
 .hamburger {
   width: 26px;
   height: 24px;
-  display: none; /* Скрыто по умолчанию */
+  display: none; 
   flex-direction: column;
   justify-content: space-between;
 }
@@ -30,7 +30,7 @@
 
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; /* Показать на экранах 768px и меньше */
+    display: flex; 
     position: absolute;
     right: 20px;
     top: 50%;

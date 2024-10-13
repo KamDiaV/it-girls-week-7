@@ -16,7 +16,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Сетка из 3 столбцов */
+    grid-template-columns: repeat(3, 1fr); 
   }
 
   &__item {
@@ -26,7 +26,7 @@
     border: 1px solid #e0e0e0;
     background-color: #fff;
     box-sizing: border-box;
-    min-height: 593px; /* Минимальная высота для каждого блока */
+    min-height: 593px; 
     transition: box-shadow 0.3s ease;
     cursor: pointer;
 
@@ -35,7 +35,7 @@
     }
 
     &:hover .production__name {
-      color: $main; /* Меняем цвет текста заголовка при наведении на всю карточку */
+      color: $main; 
     }
   }
 
@@ -43,7 +43,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 480px; /* Размер изображения можно изменить в зависимости от необходимости */
+    width: 480px; 
     height: auto;
     margin-bottom: 0;
   }
@@ -71,68 +71,68 @@
   }
 
   .production__grid {
-    grid-template-columns: 1fr 1fr; /* Два столбца на небольших экранах */
+    grid-template-columns: 1fr 1fr; 
     padding: 20px;
   }
 
   .production__item {
     padding-top: 20px;
     padding-left: 20px;
-    min-height: 450px; /* Уменьшаем минимальную высоту карточек */
+    min-height: 450px; 
   }
 
   .production__image {
-    width: 300px; /* Уменьшаем размер изображений на мобильных устройствах */
+    width: 300px; 
   }
 
   .production__name {
-    font-size: 22px; /* Уменьшаем размер заголовка */
+    font-size: 22px; 
   }
 
   .production__desc {
-    font-size: 14px; /* Уменьшаем размер описания */
-    max-width: 100%; /* Полностью используем ширину карточки */
+    font-size: 14px; 
+    max-width: 100%; 
   }
 }
 
 @media (max-width: 320px) {
   .production__title {
-    font-size: 22px; /* Уменьшаем размер заголовка */
+    font-size: 22px; 
     padding-left: 10px;
     margin-bottom: 15px;
-    text-align: center; /* Центрируем заголовок */
+    text-align: center; 
   }
 
   .production__grid {
-    grid-template-columns: 1fr; /* Один столбец на маленьких экранах */
+    grid-template-columns: 1fr; 
     padding: 10px;
-    grid-gap: 15px; /* Уменьшаем расстояние между элементами */
+    grid-gap: 15px; 
   }
 
   .production__item {
     padding-top: 10px;
     padding-left: 10px;
-    min-height: 350px; /* Уменьшаем минимальную высоту карточек */
+    min-height: 350px; 
   }
 
   .production__image {
-    width: 100%; /* Изображения занимают всю ширину карточки */
+    width: 100%; 
     height: auto;
-    max-width: 280px; /* Максимальная ширина изображений */
-    margin: 0 auto; /* Центрируем изображение */
+    max-width: 280px; 
+    margin: 0 auto; 
   }
 
   .production__name {
-    font-size: 18px; /* Уменьшаем размер заголовка */
-    text-align: center; /* Центрируем текст заголовка */
+    font-size: 18px; 
+    text-align: center; 
     margin-bottom: 10px;
   }
 
   .production__desc {
-    font-size: 12px; /* Уменьшаем размер описания */
+    font-size: 12px; 
     line-height: 150%;
-    max-width: 100%; /* Используем всю ширину карточки */
-    text-align: center; /* Центрируем описание */
+    max-width: 100%; 
+    text-align: center; 
   }
 }
 
