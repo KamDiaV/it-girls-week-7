@@ -1,0 +1,33 @@
+.features {
+  display: flex;
+  justify-content: space-between; /* Распределение элементов по ширине */
+  align-items: flex-start;
+  padding: 0; /* Убираем лишние отступы */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Верхняя граница */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Нижняя граница */
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column; /* Иконка сверху, текст снизу */
+  align-items: flex-start;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полная граница для каждого элемента */
+  flex-grow: 1; /* Чтобы элементы равномерно заполнили пространство */
+  box-sizing: border-box; /* Чтобы границы учитывались в ширине и высоте элементов */
+
+}
+
+.feature__icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 20px; /* Отступ между иконкой и текстом */
+}
+
+.feature__text {
+  font-size: 16px;
+  line-height: 160%;
+  color: #fff;
+  max-width: 67%;
+}

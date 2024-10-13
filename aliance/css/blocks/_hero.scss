@@ -1,0 +1,57 @@
+.hero {
+  background: url(../../img/bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 0;
+  position: relative;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  position: relative;
+}
+
+.rectangle {
+  margin-top: 150px; /* Расположение линии под логотипом */
+  margin-bottom: 30px;
+  width: 150px;
+  height: 2px;
+}
+
+.hero__title {
+  width: 50%;
+}
+
+.hero__main-title {
+  font-size: 56px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.hero__title-desc {
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 50px;
+}
+
+.title__btn {
+  background-color: $main;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  width: 313px;
+  height: 76px; /* Кнопка будет на всю высоту хедера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  margin-bottom: 100px;
+}
+
+.btn--theme--blue:hover {
+  background-color: $hover; /* Цвет при наведении */
+}

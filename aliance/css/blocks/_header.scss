@@ -1,0 +1,84 @@
+
+.header-wrapper {
+  width: 100%;
+  max-width: 1920px; /* Ограничение на ширину хедера */
+  margin: 0 auto;
+  padding: 0; /* Убираем любые отступы */
+  position: relative; /* Необходим для абсолютного позиционирования внутри */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0; /* Убираем отступы у хедера */
+}
+
+.logo {
+  width: 140px;
+  height: 44px;
+  margin-right: 100px;
+}
+
+.menu {
+  margin: 0;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-weight: normal;
+  color: white;
+  font-size: 16px;
+}
+
+.phone-number {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  white-space: nowrap;
+  margin-left: 212px;
+}
+
+.phone-number__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.header__btn {
+  background-color: $main;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 302px;
+  height: 100px; /* Кнопка будет на всю высоту хедера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  top: 0; /* Прижимаем к верху */
+  right: 0; /* Прижимаем к правому краю */
+}
+
+@media (max-width: 1200px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header__consult-btn {
+    margin-top: 10px;
+  }
+}

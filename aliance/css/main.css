@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import url("./reset.css");
+@import url("./normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+.header-wrapper {
+  width: 100%;
+  max-width: 1920px; /* Ограничение на ширину хедера */
+  margin: 0 auto;
+  padding: 0; /* Убираем любые отступы */
+  position: relative; /* Необходим для абсолютного позиционирования внутри */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0; /* Убираем отступы у хедера */
+}
+
+.logo {
+  width: 140px;
+  height: 44px;
+  margin-right: 100px;
+}
+
+.menu {
+  margin: 0;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-weight: normal;
+  color: white;
+  font-size: 16px;
+}
+
+.phone-number {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  white-space: nowrap;
+  margin-left: 212px;
+}
+
+.phone-number__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.header__btn {
+  background-color: #5C8EE5;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 302px;
+  height: 100px; /* Кнопка будет на всю высоту хедера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  top: 0; /* Прижимаем к верху */
+  right: 0; /* Прижимаем к правому краю */
+}
+
+@media (max-width: 1200px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .header__consult-btn {
+    margin-top: 10px;
+  }
+}
+.hamburger {
+  width: 26px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+
+.hamburger__plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.hero {
+  background: url(../../img/bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 0;
+  position: relative;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.rectangle {
+  margin-top: 150px; /* Расположение линии под логотипом */
+  margin-bottom: 30px;
+  width: 150px;
+  height: 2px;
+}
+
+.hero__title {
+  width: 50%;
+}
+
+.hero__main-title {
+  font-size: 56px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.hero__title-desc {
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 50px;
+}
+
+.title__btn {
+  background-color: #5C8EE5;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  width: 313px;
+  height: 76px; /* Кнопка будет на всю высоту хедера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  margin-bottom: 100px;
+}
+
+.btn--theme--blue:hover {
+  background-color: #003b75; /* Цвет при наведении */
+}
+
+.features {
+  display: flex;
+  justify-content: space-between; /* Распределение элементов по ширине */
+  align-items: flex-start;
+  padding: 0; /* Убираем лишние отступы */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Верхняя граница */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Нижняя граница */
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column; /* Иконка сверху, текст снизу */
+  align-items: flex-start;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Полная граница для каждого элемента */
+  flex-grow: 1; /* Чтобы элементы равномерно заполнили пространство */
+  box-sizing: border-box; /* Чтобы границы учитывались в ширине и высоте элементов */
+}
+
+.feature__icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 20px; /* Отступ между иконкой и текстом */
+}
+
+.feature__text {
+  font-size: 16px;
+  line-height: 160%;
+  color: #fff;
+  max-width: 67%;
+}
+
+.steps__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.steps__title {
+  font-size: 60px;
+  line-height: 120%;
+  margin-bottom: 50px;
+  position: relative;
+  color: #292D33;
+}
+.steps__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.steps .step {
+  width: 23%; /* Все блоки шагов будут равномерно распределены */
+}
+.steps .step__number {
+  font-size: 48px;
+  color: #5C8EE5;
+  margin-bottom: 30px;
+}
+.steps .step__title {
+  font-size: 28px;
+  line-height: 160%;
+  margin-bottom: 10px;
+  color: #292D33;
+}
+.steps .step__desc {
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 20px;
+  color: #828A99;
+}
+
+.step__link {
+  font-size: 16px;
+  color: #5C8EE5;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding-left: 50px; /* Добавляем отступ слева для размещения прямоугольника */
+  transition: color 0.3s ease;
+  /* Добавляем прямоугольник перед текстом */
+}
+.step__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: #5C8EE5; /* Цвет прямоугольника */
+}
+.step__link:hover {
+  color: #003b75;
+}
+
+.production__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.production {
+  padding: 60px 0;
+  background-color: #fff;
+}
+.production__title {
+  font-size: 60px;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #292D33;
+}
+.production__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Сетка из 3 столбцов */
+}
+.production__item {
+  padding: 20px;
+}
+.production__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+.production__name {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #292D33;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.production:hover {
+  color: #5C8EE5;
+}
+.production__desc {
+  font-size: 16px;
+  color: #828A99;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+image {
+  display: block;
+  min-width: 100%;
+}/*# sourceMappingURL=main.css.map */

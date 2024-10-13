@@ -1,0 +1,71 @@
+.steps__container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+}
+
+.steps {
+  
+  &__title {
+    font-size: 60px;
+    line-height: 120%;
+    margin-bottom: 50px;
+    position: relative;
+    color: $txt;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .step {
+    width: 23%; /* Все блоки шагов будут равномерно распределены */
+
+    &__number {
+      font-size: 48px;
+      color: $main;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 160%;
+      margin-bottom: 10px;
+      color: $txt;
+    }
+
+    &__desc {
+      font-size: 16px;
+      line-height: 160%;
+      margin-bottom: 20px;
+      color: $txt2;
+    }
+  }
+}
+
+.step__link {
+  font-size: 16px;
+  color: $main;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding-left: 50px; /* Добавляем отступ слева для размещения прямоугольника */
+  transition: color 0.3s ease;
+  
+  /* Добавляем прямоугольник перед текстом */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 1px;
+    background-color: $main; /* Цвет прямоугольника */
+  }
+
+  &:hover {
+    color: $hover;
+  }
+}

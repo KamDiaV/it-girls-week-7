@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Базовый стиль для текста */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Для десктопов */
+}
+
+h1, h2, h3, h4, h5, h6, p, div, section {
+  font-size: 1rem; /* Пропорциональный размер шрифта */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Шапка */
+.header {
+  background-color: #d3d3d3;
+  padding: 2vw;
+  text-align: center;
+}
+
+/* Основной контент */
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-content {
+  background-color: #fdf4d3;
+  padding: 2vw;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #e5f6db;
+  padding: 2vw;
+  text-align: center;
+}
+
+.content-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+}
+
+.content-item {
+  background-color: #f5d99f;
+  padding: 2vw;
+  text-align: center;
+}
+
+.content-item:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Футер */
+.footer {
+  padding: 2vw;
+  background-color: #d3d3d3;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+}
+
+.footer-section {
+  padding: 2vw;
+  text-align: center;
+  background-color: #FAFAFA;
+}
+
+/* Респонсивная корректировка колонок */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Уменьшаем базовый размер шрифта на планшетах */
+  }
+  h1, h2, h3, h4, h5, h6, p, div, section {
+    font-size: 0.9rem; /* Уменьшаем размер шрифта относительно тела */
+  }
+  .main {
+    grid-template-columns: 2fr 1fr;
+  }
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Ещё меньше размер шрифта на мобильных */
+  }
+  h1, h2, h3, h4, h5, h6, p, div, section {
+    font-size: 0.8rem; /* Пропорционально уменьшаем заголовки и текст */
+  }
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .content-list{
+    grid-column: span 1;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}

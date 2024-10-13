@@ -1,0 +1,49 @@
+.production__container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+}
+
+.production {
+  padding: 60px 0;
+  background-color: #fff;
+
+  &__title {
+    font-size: 60px;
+    text-align: left;
+    margin-bottom: 40px;
+    color: $txt;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Сетка из 3 столбцов */
+  }
+
+  &__item {
+    padding: 20px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  &__name {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: $txt;                                                              
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $main;
+  }
+
+  &__desc {
+    font-size: 16px; 
+    color: $txt2;     
+    line-height: 160%;                                                                     
+  }
+}                
