@@ -1,6 +1,7 @@
 .production__container {
   max-width: $containerWidth;
   margin: 0 auto;
+  padding: 15px;
 }
 
 .production {
@@ -43,7 +44,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 480px; 
+    width: 100%; 
+    max-width: 480px;
     height: auto;
     margin-bottom: 0;
   }
@@ -82,7 +84,7 @@
   }
 
   .production__image {
-    width: 300px; 
+    max-width: 300px; 
   }
 
   .production__name {
@@ -116,15 +118,13 @@
   }
 
   .production__image {
-    width: 100%; 
-    height: auto;
     max-width: 280px; 
     margin: 0 auto; 
   }
 
   .production__name {
     font-size: 18px; 
-    text-align: center; 
+    text-align: left; 
     margin-bottom: 10px;
   }
 
@@ -132,7 +132,7 @@
     font-size: 12px; 
     line-height: 150%;
     max-width: 100%; 
-    text-align: center; 
+    text-align: left; 
   }
 }
 
